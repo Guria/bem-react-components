@@ -5,6 +5,9 @@ module.exports = {
             scheme : 'nested',
             naming : 'react',
             default : true
+        },
+        'blocks/**/*.tests' : {
+            scheme : 'flat'
         }
     },
     modules : {
@@ -16,6 +19,16 @@ module.exports = {
                         js : '.bem/templates/js.js',
                         'spec.js' : '.bem/templates/spec.js.js',
                         'tests' : '.bem/templates/tests.js',
+                    },
+                    levels : {
+                        'blocks*/**/*.tests' : {
+                            techs : ['js', 'css', 'html' ],
+                            templates : {
+                                js : '.bem/templates/tests-js.js',
+                                css : '.bem/templates/tests-css.js',
+                                html : '.bem/templates/tests-html.js',
+                            },
+                        }
                     }
                 }
             }
